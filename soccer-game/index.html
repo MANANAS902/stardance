@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Dash</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Geometry Dash inspired</p>
+        <h1>Neon Dash</h1>
+        <p id="status">Press Space, Up Arrow, or click to jump.</p>
+      </div>
+      <div class="score-panel" aria-label="Score panel">
+        <div>
+          <span class="label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span class="label">Best</span>
+          <strong id="best-score">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <main class="game-layout">
+      <section class="game-stage">
+        <canvas id="game" width="960" height="540" aria-label="Neon Dash game canvas"></canvas>
+        <div class="overlay" id="overlay" hidden>
+          <h2>Game Over</h2>
+          <p id="final-message">You crashed into an obstacle.</p>
+          <button id="restart" type="button">Restart</button>
+        </div>
+      </section>
+
+      <aside class="controls">
+        <button id="restart-secondary" type="button">Restart Run</button>
+        <div class="slider-row">
+          <label for="difficulty">Difficulty: <span id="difficulty-value">55</span>%</label>
+          <input id="difficulty" type="range" min="20" max="100" value="55" />
+          <p class="hint">Higher values make the level faster and tighter.</p>
+        </div>
+        <div class="legend">
+          <span>Jump: Space / Up / Click</span>
+          <span>Restart: R</span>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
